@@ -15,7 +15,7 @@ export default function index() {
                         </Route>
                     );
                 })}
-                <Route exact path="/dashboard">
+                <Route path="/">
                     <MyCarousel />
                 </Route>
             </Switch>
