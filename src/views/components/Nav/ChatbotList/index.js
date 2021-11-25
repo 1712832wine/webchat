@@ -22,6 +22,7 @@ export default class index extends Component {
                             >
                                 <img
                                     className="avatar"
+                                    alt="avatar"
                                     src="https://s120-ava-talk.zadn.vn/0/6/c/b/14/120/7b32f6befc50581b21445c1f18d29240.jpg"
                                 />
                             </div>
