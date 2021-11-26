@@ -3,10 +3,10 @@ import {
     SEND_MESSAGE,
     SEND_MESSAGE_SUCCESS,
     SEND_MESSAGE_FAILED,
+    SEND_MESSAGE_FINISHED,
 } from "../constants/action-types";
 
 const sendMessageAction = (data) => (dispatch) => {
-    console.log("action:", data);
     // notify SEND_MESSAGE action start
     dispatch({
         type: SEND_MESSAGE,
@@ -30,6 +30,9 @@ const sendMessageAction = (data) => (dispatch) => {
                     },
                 });
             }
+            dispatch({
+                type: SEND_MESSAGE_FINISHED,
+            });
         })
         .catch(() => {
             dispatch({

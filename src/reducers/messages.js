@@ -2,6 +2,7 @@ import {
     SEND_MESSAGE,
     SEND_MESSAGE_SUCCESS,
     SEND_MESSAGE_FAILED,
+    SEND_MESSAGE_FINISHED,
 } from "../constants/action-types";
 
 var initialState = {
@@ -26,6 +27,10 @@ function messagesReducer(state = initialState, action) {
                 ...state,
                 isLoading: false,
                 errMessage: action.payload.message,
+            };
+        case SEND_MESSAGE_FINISHED:
+            return {
+                ...initialState,
             };
         default:
             return state;

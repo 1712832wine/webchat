@@ -7,10 +7,10 @@ import { sendMessageAction } from "../../../../../actions";
 import "./MessageBoxTexting.scss";
 
 function MessageBoxTexting({
+    sendMessageAction,
     messageList,
     setMessageList,
     response_message,
-    sendMessageAction,
 }) {
     const [message, setMessage] = useState("");
     const handleSubmit = () => {
@@ -21,14 +21,16 @@ function MessageBoxTexting({
             const newList = [{ text, type: 1 }, ...list];
             setMessageList(newList);
             setMessage("");
-            console.log(text);
-            sendMessageAction({ text });
+            sendMessageAction({ message: text });
         }
     };
     useEffect(() => {
-        const list = messageList;
-        const newList = [{ type: 2, text: "fdsfslafasdf" }, ...messageList];
-        setMessageList(newList);
+        if (response_message !== "") {
+            const list = messageList;
+            const newList = [{ type: 2, text: response_message }, ...list];
+            setMessageList(newList);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response_message]);
     const handleChange = (e) => {
         setMessage(e.target.value);
