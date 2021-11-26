@@ -1,4 +1,3 @@
-import { loginAction } from "./auth";
-import { fetchStudentsAction } from "./students";
+import { sendMessageAction } from "./messages";
 
-export { loginAction, fetchStudentsAction };
+export { sendMessageAction };

@@ -1,11 +1,9 @@
 import { combineReducers } from "redux";
 
-import authReducer from "./auth";
-import studentReducer from "./students";
+import messagesReducer from "./messages";
 
 let reducersAll = combineReducers({
-    auth: authReducer,
-    students: studentReducer,
+    messages: messagesReducer,
 });
 
 export default reducersAll;

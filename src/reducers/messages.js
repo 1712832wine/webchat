@@ -1,27 +1,27 @@
-import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILED } from "../constants/action-types";
+import {
+    SEND_MESSAGE,
+    SEND_MESSAGE_SUCCESS,
+    SEND_MESSAGE_FAILED,
+} from "../constants/action-types";
 
 var initialState = {
     isLoading: false,
-    username: "",
-    token: "",
     errMessage: "",
-    isLoggedIn: false,
+    response_message: "",
 };
 
-function authReducer(state = initialState, action) {
+function messagesReducer(state = initialState, action) {
     switch (action.type) {
-        case LOGIN:
+        case SEND_MESSAGE:
             return { ...state, errMessage: "", isLoading: true };
-        case LOGIN_SUCCESS:
+        case SEND_MESSAGE_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
-                username: action.payload.username,
-                token: action.payload.token,
-                isLoggedIn: true,
+                response_message: action.payload.response_message,
             };
 
-        case LOGIN_FAILED:
+        case SEND_MESSAGE_FAILED:
             return {
                 ...state,
                 isLoading: false,
@@ -32,4 +32,4 @@ function authReducer(state = initialState, action) {
     }
 }
 
-export default authReducer;
+export default messagesReducer;

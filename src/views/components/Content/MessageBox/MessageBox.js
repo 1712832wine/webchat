@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import MessageBoxTitle from "./MessageBoxTitle/MessageBoxTitle";
 import MessageBoxContent from "./MessageBoxContent/MessageBoxContent";
 import MessageBoxTexting from "./MessageBoxTexting/MessageBoxTexting";
-// context
-// import { BotContext } from "../../../../context";
 // others
 import "./MessageBox.scss";
 
