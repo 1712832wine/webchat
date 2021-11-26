@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.scss";
-import MyCarousel from "./MyCarousel";
+import "./Content.scss";
+
 import { Switch, Route } from "react-router-dom";
 import routers from "../../../routersChatbot";
 
-export default function index() {
+export default function Content() {
     return (
         <div id="content" className="col d-none d-md-block">
             <Switch>
@@ -16,7 +16,7 @@ export default function index() {
                     );
                 })}
                 <Route path="/">
-                    <MyCarousel />
+                    <h1>This is carousel</h1>
                 </Route>
             </Switch>
         </div>

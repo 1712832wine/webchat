@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch, NavLink, Route, Redirect } from "react-router-dom";
-import Avatar from "./Avatar";
+import Avatar from "./Avatar/Avatar";
 import routers from "../../../routers";
-import "./style.scss";
+import "./Nav.scss";
 
-export default function index() {
+export default function Nav() {
     return (
         <>
             <div id="mynav" className="col-auto">

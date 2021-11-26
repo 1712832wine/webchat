@@ -3,7 +3,7 @@ import {
     PieChartOutlined,
     FileOutlined,
 } from "@ant-design/icons";
-import ChatbotList from "./views/components/Nav/ChatbotList";
+import ChatbotList from "./views/components/NavContent/ChatbotList/ChatbotList";
 let routers = [
     {
         name: "Dashboard",

@@ -1,8 +1,9 @@
+import MessageBox from "./views/components/Content/MessageBox/MessageBox";
 let routers = [
     {
         name: "Chatbot 1",
         path: "/dashboard/chatbot1",
-        component: <h1>Chatbot 1 content</h1>,
+        component: <MessageBox />,
     },
     {
         name: "Chatbot 2",

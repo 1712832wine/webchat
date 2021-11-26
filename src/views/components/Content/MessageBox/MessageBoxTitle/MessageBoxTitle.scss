@@ -1,0 +1,38 @@
+.message-box-title-wrapper {
+  margin-top: 30px;
+  border-bottom: 1px solid #828385;
+
+  .message-box-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 69px;
+    padding-left: 10px;
+
+    .message-box-avatar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20px;
+      background: #c9cdd1;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      font-size: 25px;
+    }
+
+    .message-box-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15px;
+      color: #828385;
+      font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
