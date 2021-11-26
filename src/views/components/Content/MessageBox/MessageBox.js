@@ -9,6 +9,7 @@ import "./MessageBox.scss";
 
 export default function MessageBox() {
     const [messageList, setMessageList] = useState([]);
+    const [response_message] = useState("");
     return (
         <div className="message-box-wrapper">
             <div className="message-box">
@@ -17,6 +18,7 @@ export default function MessageBox() {
                 <MessageBoxTexting
                     messageList={messageList}
                     setMessageList={setMessageList}
+                    response_message={response_message}
                 />
             </div>
         </div>

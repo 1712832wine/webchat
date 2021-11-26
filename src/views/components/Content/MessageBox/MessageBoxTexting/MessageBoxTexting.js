@@ -2,13 +2,18 @@
 import React, { useEffect, useState } from "react";
 import { SendOutlined } from "@ant-design/icons";
 import { connect } from "react-redux";
-import { sendMessageAction } from "../../../../../actions/messages";
+import { sendMessageAction } from "../../../../../actions";
 // others
 import "./MessageBoxTexting.scss";
 
-function MessageBoxTexting({ messageList, setMessageList }) {
+function MessageBoxTexting({
+    messageList,
+    setMessageList,
+    response_message,
+    sendMessageAction,
+}) {
     const [message, setMessage] = useState("");
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
         // e.preventDefault();
         const text = message.trim();
         if (text !== "") {
@@ -20,11 +25,11 @@ function MessageBoxTexting({ messageList, setMessageList }) {
             sendMessageAction({ text });
         }
     };
-    // useEffect(() => {
-    // const list = messageList;
-    // const newList = [{ type: 2, text: "fdsfslafasdf" }, ...messageList];
-    // setMessageList(newList);
-    // });
+    useEffect(() => {
+        const list = messageList;
+        const newList = [{ type: 2, text: "fdsfslafasdf" }, ...messageList];
+        setMessageList(newList);
+    }, [response_message]);
     const handleChange = (e) => {
         setMessage(e.target.value);
     };
@@ -50,7 +55,7 @@ function MessageBoxTexting({ messageList, setMessageList }) {
 
 function mapStateToProps(state) {
     return {
-        // response_messages: state.messages.response_messages,
+        response_message: state.messages.response_message,
     };
 }
 
