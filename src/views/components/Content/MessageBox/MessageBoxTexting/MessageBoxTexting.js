@@ -13,8 +13,8 @@ function MessageBoxTexting({
     response_message,
 }) {
     const [message, setMessage] = useState("");
-    const handleSubmit = () => {
-        // e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const text = message.trim();
         if (text !== "") {
             const list = messageList;
