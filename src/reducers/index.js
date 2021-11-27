@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 
-import messagesReducer from "./messages";
+import sendmessagesReducer from "./messages";
+import chatbotsReducer from "./chatbots";
 
 let reducersAll = combineReducers({
-    messages: messagesReducer,
+    response: sendmessagesReducer,
+    chatbots: chatbotsReducer,
 });
 
 export default reducersAll;

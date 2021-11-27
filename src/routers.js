@@ -6,9 +6,9 @@ import {
 import ChatbotList from "./views/components/NavContent/ChatbotList/ChatbotList";
 let routers = [
     {
-        name: "Dashboard",
+        name: "Chatbots",
         icon: <DesktopOutlined />,
-        path: "/dashboard",
+        path: "/chatbots",
         component: <ChatbotList />,
     },
     {

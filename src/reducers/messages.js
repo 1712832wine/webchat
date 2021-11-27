@@ -11,7 +11,7 @@ var initialState = {
     response_message: "",
 };
 
-function messagesReducer(state = initialState, action) {
+function sendmessagesReducer(state = initialState, action) {
     switch (action.type) {
         case SEND_MESSAGE:
             return { ...state, errMessage: "", isLoading: true };
@@ -37,4 +37,4 @@ function messagesReducer(state = initialState, action) {
     }
 }
 
-export default messagesReducer;
+export default sendmessagesReducer;

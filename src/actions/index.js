@@ -1,3 +1,3 @@
 import { sendMessageAction } from "./messages";
-
-export { sendMessageAction };
+import { changeChatbotAction } from "./chatbots";
+export { sendMessageAction, changeChatbotAction };

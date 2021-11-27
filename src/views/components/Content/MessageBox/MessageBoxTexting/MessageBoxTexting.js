@@ -57,7 +57,7 @@ function MessageBoxTexting({
 
 function mapStateToProps(state) {
     return {
-        response_message: state.messages.response_message,
+        response_message: state.response.response_message,
     };
 }
 
