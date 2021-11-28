@@ -1,6 +1,6 @@
 // libs
 import React, { useEffect, useState } from "react";
-import { SendOutlined } from "@ant-design/icons";
+import { Form, Button, Stack } from "react-bootstrap";
 import { connect } from "react-redux";
 import { sendMessageAction } from "../../../../../actions";
 // others
@@ -36,22 +36,19 @@ function MessageBoxTexting({
         setMessage(e.target.value);
     };
     return (
-        <div className="message-box-texting-wrapper">
-            <div className="message-box-texting">
-                <form className="message-box-form" onSubmit={handleSubmit}>
-                    <input
-                        className="message-box-texting-input"
-                        value={message}
-                        onChange={handleChange}
-                        onSubmit={handleSubmit}
-                        placeholder="Nhập nội dung tin nhắn"
-                    ></input>
-                    <div className="message-box-btn-send">
-                        <SendOutlined onClick={handleSubmit} />
-                    </div>
-                </form>
-            </div>
-        </div>
+        <Form className="p-3" onSubmit={handleSubmit}>
+            <Stack direction="horizontal" gap={2}>
+                <Form.Control
+                    value={message}
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="Enter message"
+                />
+                <Button variant="primary" type="submit">
+                    Send
+                </Button>
+            </Stack>
+        </Form>
     );
 }
 

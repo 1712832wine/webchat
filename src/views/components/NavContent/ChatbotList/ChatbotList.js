@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-
 import { connect } from "react-redux";
 import { changeChatbotAction } from "../../../../actions";
-import "./ChatbotList.scss";
+import { Image } from "react-bootstrap";
 
 const chatbots = [
     {
@@ -26,13 +25,7 @@ function ChatbotList({ changeChatbotAction }) {
     };
     return (
         <ul className="chatbot-list">
-            <li id="chatBotSearch">
-                <div className="d-flex justify-content-center">
-                    <input className="align-self-center" type="text" placeholder="Search...">
-                    </input>
-                </div>
-                    
-            </li>
+            <h6 className="px-2 py-3">Chatbot List</h6>
             {chatbots.map((chatbot) => {
                 return (
                     <li
@@ -49,7 +42,7 @@ function ChatbotList({ changeChatbotAction }) {
                             className="avatar-box me-2"
                             style={{ background: "transparent" }}
                         >
-                            <img
+                            <Image
                                 className="avatar"
                                 alt={chatbot.name}
                                 src="https://cdn-icons.flaticon.com/png/512/2938/premium/2938406.png?token=exp=1638089007~hmac=7842a41680ac58a569a21ef9c128938c"

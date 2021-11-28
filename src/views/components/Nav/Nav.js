@@ -2,12 +2,13 @@ import React from "react";
 import { Switch, NavLink, Route, Redirect } from "react-router-dom";
 import Avatar from "./Avatar/Avatar";
 import routers from "../../../routers";
+import { Col } from "react-bootstrap";
 import "./Nav.scss";
 
 export default function Nav() {
     return (
         <>
-            <div id="mynav" className="col-auto">
+            <Col id="mynav" sm="auto">
                 <Avatar />
                 <div className="mytab">
                     {routers.map((router) => {
@@ -23,9 +24,8 @@ export default function Nav() {
                         );
                     })}
                 </div>
-            </div>
-
-            <div id="mynav-content" className="col-md-auto col p-0">
+            </Col>
+            <Col id="mynav-content" className="p-0" sm="auto">
                 <Switch>
                     {routers.map((router) => {
                         return (
@@ -40,7 +40,7 @@ export default function Nav() {
                         <Redirect to="/dashboard" />
                     </Route>
                 </Switch>
-            </div>
+            </Col>
         </>
     );
 }
