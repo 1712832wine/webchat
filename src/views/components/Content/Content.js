@@ -1,13 +1,13 @@
 import React from "react";
 import "./Content.scss";
 
-import { Carousel, Image } from "react-bootstrap";
+import { Carousel, Image, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import MessageBox from "./MessageBox/MessageBox";
 
 function Content({ id }) {
     return (
-        <div id="content" className="col d-none d-md-block">
+        <Col id="content" className="d-none d-md-block p-0">
             {id ? (
                 <MessageBox />
             ) : (
@@ -35,7 +35,7 @@ function Content({ id }) {
                     </Carousel.Item>
                 </Carousel>
             )}
-        </div>
+        </Col>
     );
 }
 
