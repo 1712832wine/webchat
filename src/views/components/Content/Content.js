@@ -1,9 +1,10 @@
 import React from "react";
-import "./Content.scss";
+
 
 import { Carousel, Image, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import MessageBox from "./MessageBox/MessageBox";
+import "./Content.scss";
 
 function Content({ id }) {
     return (

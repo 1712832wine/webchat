@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import "./ChatbotList.scss";
 import { connect } from "react-redux";
 import { changeChatbotAction } from "../../../../actions";
 import { Image } from "react-bootstrap";
@@ -46,7 +45,7 @@ function ChatbotList({ changeChatbotAction }) {
                             <Image
                                 className="avatar"
                                 alt={chatbot.name}
-                                src="https://s120-ava-talk.zadn.vn/0/6/c/b/14/120/7b32f6befc50581b21445c1f18d29240.jpg"
+                                src="https://cdn-icons.flaticon.com/png/512/2938/premium/2938406.png?token=exp=1638089007~hmac=7842a41680ac58a569a21ef9c128938c"
                             />
                         </div>
                         <div className="d-flex flex-column justify-content-center w-100">
