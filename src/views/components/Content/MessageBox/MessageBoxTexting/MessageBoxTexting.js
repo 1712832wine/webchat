@@ -11,6 +11,7 @@ function MessageBoxTexting({
     messageList,
     setMessageList,
     response_message,
+    isLoading,
 }) {
     const [message, setMessage] = useState("");
     const handleSubmit = (e) => {
@@ -44,8 +45,8 @@ function MessageBoxTexting({
                     type="text"
                     placeholder="Enter message"
                 />
-                <Button variant="primary" type="submit">
-                    Send
+                <Button variant="primary" type="submit" disabled={isLoading}>
+                    {isLoading ? "Sending..." : "Send"}
                 </Button>
             </Stack>
         </Form>
@@ -54,6 +55,7 @@ function MessageBoxTexting({
 
 function mapStateToProps(state) {
     return {
+        isLoading: state.response.isLoading,
         response_message: state.response.response_message,
     };
 }
