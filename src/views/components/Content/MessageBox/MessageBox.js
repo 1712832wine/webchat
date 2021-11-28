@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import MessageBoxTitle from "./MessageBoxTitle/MessageBoxTitle";
 import MessageBoxContent from "./MessageBoxContent/MessageBoxContent";
 import MessageBoxTexting from "./MessageBoxTexting/MessageBoxTexting";
+import MessageBoxAttach from "./MessageBoxAttach/MessageBoxAttach"
 // others
 import "./MessageBox.scss";
 
@@ -15,6 +16,7 @@ export default function MessageBox() {
             <div className="message-box">
                 <MessageBoxTitle />
                 <MessageBoxContent messageList={messageList} />
+                <MessageBoxAttach/>
                 <MessageBoxTexting
                     messageList={messageList}
                     setMessageList={setMessageList}
