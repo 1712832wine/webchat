@@ -11,16 +11,14 @@ export default function MessageBox() {
     const [messageList, setMessageList] = useState([]);
     const [response_message] = useState("");
     return (
-        <div className="message-box-wrapper">
-            <div className="message-box">
-                <MessageBoxTitle />
-                <MessageBoxContent messageList={messageList} />
-                <MessageBoxTexting
-                    messageList={messageList}
-                    setMessageList={setMessageList}
-                    response_message={response_message}
-                />
-            </div>
+        <div className="message-box">
+            <MessageBoxTitle />
+            <MessageBoxContent messageList={messageList} />
+            <MessageBoxTexting
+                messageList={messageList}
+                setMessageList={setMessageList}
+                response_message={response_message}
+            />
         </div>
     );
 }

@@ -2,21 +2,19 @@
 import React from "react";
 // components
 import { RobotOutlined } from "@ant-design/icons";
-// useContext
+import { Stack } from "react-bootstrap";
 // others
 import "./MessageBoxTitle.scss";
 import { connect } from "react-redux";
 
 function MessageBoxTitle({ name }) {
     return (
-        <div className="message-box-title-wrapper">
-            <div className="message-box-title">
-                <div className="message-box-avatar">
-                    <RobotOutlined />
-                </div>
-                <div className="message-box-info">{name} </div>
+        <Stack direction="horizontal" gap={2} className="p-3">
+            <div className="message-box-avatar">
+                <RobotOutlined />
             </div>
-        </div>
+            <div className="message-box-info">{name}</div>
+        </Stack>
     );
 }
 function mapStateToProps(state) {

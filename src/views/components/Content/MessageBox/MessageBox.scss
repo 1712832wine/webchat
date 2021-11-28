@@ -1,7 +1,5 @@
-.message-box-wrapper {
-  .message-box {
-    display: grid;
-    grid-template-rows: 100px auto 70px;
-    height: 100%;
-  }
+.message-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
