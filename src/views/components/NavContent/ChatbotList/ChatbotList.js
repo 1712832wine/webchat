@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./ChatbotList.scss";
 import { connect } from "react-redux";
 import { changeChatbotAction } from "../../../../actions";
+import { Image } from "react-bootstrap";
 
 const chatbots = [
     {
@@ -25,7 +26,7 @@ function ChatbotList({ changeChatbotAction }) {
     };
     return (
         <ul className="chatbot-list">
-            <h6 className="my-2 ps-2">Chatbot List</h6>
+            <h6 className="px-2 py-3">Chatbot List</h6>
             {chatbots.map((chatbot) => {
                 return (
                     <li
@@ -42,7 +43,7 @@ function ChatbotList({ changeChatbotAction }) {
                             className="avatar-box me-2"
                             style={{ background: "transparent" }}
                         >
-                            <img
+                            <Image
                                 className="avatar"
                                 alt={chatbot.name}
                                 src="https://s120-ava-talk.zadn.vn/0/6/c/b/14/120/7b32f6befc50581b21445c1f18d29240.jpg"
