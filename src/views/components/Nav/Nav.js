@@ -37,7 +37,7 @@ export default function Nav() {
                         );
                     })}
                     <Route exact path="/">
-                        <Redirect to="/dashboard" />
+                        <Redirect to="/chatbots" />
                     </Route>
                 </Switch>
             </Col>
