@@ -1,4 +1,4 @@
-import { CHANGE_CHATBOT, CHANGE_ROUTE } from "../constants/action-types";
+import { CHANGE_CHATBOT, HIDE_CHATBOT } from "../constants/action-types";
 
 var initialState = {
     id: null,
@@ -16,7 +16,7 @@ function chatbotsReducer(state = initialState, action) {
                 name: action.payload.name,
                 isOpenChatbot: true,
             };
-        case CHANGE_ROUTE:
+        case HIDE_CHATBOT:
             return {
                 ...state,
                 isOpenChatbot: false,

@@ -1,4 +1,4 @@
-import { CHANGE_CHATBOT, CHANGE_ROUTE } from "../constants/action-types";
+import { CHANGE_CHATBOT, HIDE_CHATBOT } from "../constants/action-types";
 
 const changeChatbotAction = (data) => (dispatch) => {
     dispatch({
@@ -12,7 +12,7 @@ const changeChatbotAction = (data) => (dispatch) => {
 const changeRouteAction = (data) => (dispatch) => {
     if (data.isOpenChatbot) {
         dispatch({
-            type: CHANGE_ROUTE,
+            type: HIDE_CHATBOT,
         });
     }
 };
