@@ -2,50 +2,30 @@
     width: 64px;
     background-color: #0091ff;
     padding: 0;
-}
+    .mynav{
+        overflow: hidden;
 
-#mynav-content {
-    width: 336px;
-    border-right: 1px solid #e1e4ea;
-}
-
-@media only screen and (min-width: 769px) {
-    #mynav-content {
-        width: 336px;
-    }
-}
-
-
-/* Style the buttons that are used to open the tab content */
-.mytab {
-    overflow: hidden;
-
-    .tablinks {
-        height: 60px;
-        font-size: 24px;
-        display: block;
-        width: 100%;
-        color: white;
-        background-color: inherit;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        transition: 0.3s;
-
-        /* Change background color of buttons on hover */
-        &:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        &.active {
-            background-color: #006edc;
+        .navlink {
+            height: 60px;
+            font-size: 24px;
+            display: block;
+            width: 100%;
+            color: white;
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+    
+            /* Change background color of buttons on hover */
+            &:hover {
+                background-color: #ddd;
+            }
+    
+            /* Create an active/current tablink class */
+            &.active {
+                background-color: #006edc;
+            }
         }
     }
-
-}
-
-.tabcontent {
-    box-sizing: border-box;
-    border-top: none;
 }
