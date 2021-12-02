@@ -15,6 +15,7 @@ function chatbotsReducer(state = initialState, action) {
                 id: action.payload.id,
                 name: action.payload.name,
                 isOpenChatbot: true,
+                list_messages: localStorage.getItem(action.payload.name)
             };
         case HIDE_CHATBOT:
             return {

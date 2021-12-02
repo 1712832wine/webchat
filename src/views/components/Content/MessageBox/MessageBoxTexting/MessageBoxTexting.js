@@ -1,8 +1,11 @@
 // libs
 import React, { useEffect, useState } from "react";
 import { Form, Button, Stack } from "react-bootstrap";
+
 import { connect } from "react-redux";
 import { sendMessageAction } from "../../../../../actions";
+
+import { setLocalStorage } from "../../../../../helper";
 // others
 import "./MessageBoxTexting.scss";
 
@@ -12,6 +15,7 @@ function MessageBoxTexting({
     setMessageList,
     response_message,
     isLoading,
+    chatbot_id
 }) {
     const [message, setMessage] = useState("");
     const handleSubmit = (e) => {
@@ -22,6 +26,7 @@ function MessageBoxTexting({
             const newList = [{ text, type: 1 }, ...list];
             setMessageList(newList);
             setMessage("");
+            setLocalStorage(chatbot_id, newList);
             sendMessageAction({ message: text });
         }
     };
@@ -30,6 +35,7 @@ function MessageBoxTexting({
             const list = messageList;
             const newList = [{ type: 2, text: response_message }, ...list];
             setMessageList(newList);
+            setLocalStorage(chatbot_id, newList);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response_message]);
