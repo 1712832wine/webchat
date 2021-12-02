@@ -23,7 +23,7 @@ export default function MessageBox({ chatbot_id }) {
 
     return (
         <div className="message-box">
-            <MessageBoxTitle />
+            <MessageBoxTitle chatbot_id={chatbot_id} setMessageList={setMessageList} />
             <MessageBoxContent messageList={messageList} />
             <MessageBoxTexting
                 chatbot_id={chatbot_id}
