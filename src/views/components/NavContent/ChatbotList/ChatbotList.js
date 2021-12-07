@@ -7,11 +7,11 @@ import Chatbotitem from "./ChatbotItem/ChatbotItem";
 const chatbots = [
   {
     id: 1,
-    name: "Chatbot 1",
+    name: "Chatterbot",
   },
   {
     id: 2,
-    name: "Chatbot 2",
+    name: "Rasa",
   },
 ];
 

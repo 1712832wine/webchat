@@ -27,7 +27,7 @@ function MessageBoxTexting({
             setMessageList(newList);
             setMessage("");
             setLocalStorage(chatbot_id, newList);
-            sendMessageAction({ message: text });
+            sendMessageAction({ chatbot_id, message: text });
         }
     };
     useEffect(() => {
