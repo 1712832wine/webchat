@@ -5,11 +5,12 @@ import { Carousel, Image, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import MessageBox from "./MessageBox/MessageBox";
 
-function Content({ id }) {
+function Content({ chatbot_id, isOpenChatbot }) {
+    const hideClassName = "d-none d-md-block";
     return (
-        <Col id="content" className="d-none d-md-block p-0">
-            {id ? (
-                <MessageBox />
+        <Col chatbot_id="content" className={(isOpenChatbot) ? "p-0" : "p-0 " + hideClassName}>
+            {chatbot_id ? (
+                <MessageBox chatbot_id={chatbot_id} />
             ) : (
                 <Carousel variant="dark">
                     <Carousel.Item>
@@ -41,7 +42,8 @@ function Content({ id }) {
 
 function mapStateToProps(state) {
     return {
-        id: state.chatbots.id,
+        chatbot_id: state.chatbots.id,
+        isOpenChatbot: state.chatbots.isOpenChatbot,
     };
 }
 export default connect(mapStateToProps)(Content);
