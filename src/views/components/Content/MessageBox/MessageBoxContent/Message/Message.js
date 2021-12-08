@@ -6,50 +6,45 @@ import { Image } from 'antd';
 // others
 import "./Message.scss";
 
+const singleMessage = (text, type, recipient_id, image) => (
+    <div
+        key={Math.random()}
+        className={
+            type === 1 ? "message-user-wrapper" : "message-bot-wrapper"
+        }
+    >
+        <div className="message-avatar">
+            {type === 1 ? <UserOutlined /> : <RobotOutlined />}
+        </div>
+        <Card>
+            <Card.Body className="message-text">
+                {
+                    image ?
+                        <Image
+                            width={200}
+                            src={image}
+                        /> :
+                        text
+                }
+            </Card.Body>
+        </Card>
+    </div>
+)
+
 export default function Message({ text, type }) {
     return (
         <>
             {
                 (Array.isArray(text)) ?
-                    // multiple response message
-                    text.slice(0).reverse().map(({ text, recipient_id, image }) => (
-                        <div
-                            key={Math.random()}
-                            className={
-                                type === 1 ? "message-user-wrapper" : "message-bot-wrapper"
-                            }
-                        >
-                            <div className="message-avatar">
-                                {type === 1 ? <UserOutlined /> : <RobotOutlined />}
-                            </div>
-                            <Card>
-                                <Card.Body className="message-text">
-                                    {
-                                        image ?
-                                            <Image
-                                                width={200}
-                                                src={image}
-                                            /> :
-                                            text
-                                    }
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    )) :
                     (
-                        // single response message
-                        <div
-                            className={
-                                type === 1 ? "message-user-wrapper" : "message-bot-wrapper"
-                            }
-                        >
-                            <div className="message-avatar">
-                                {type === 1 ? <UserOutlined /> : <RobotOutlined />}
-                            </div>
-                            <Card>
-                                <Card.Body className="message-text">{text}</Card.Body>
-                            </Card>
-                        </div>
+                        // multiple message
+                        text.slice(0).reverse().map(({ text, recipient_id, image }) => (
+                            singleMessage(text, type, recipient_id, image)
+                        ))
+                    ) :
+                    (
+                        // single message
+                        singleMessage(text, type)
                     )
             }
         </>
