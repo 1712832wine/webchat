@@ -12,9 +12,9 @@ export default function Message({ text, type }) {
             {
                 (Array.isArray(text)) ?
                     // multiple response message
-                    text.map(({ text, recipient_id, image }) => (
+                    text.slice(0).reverse().map(({ text, recipient_id, image }) => (
                         <div
-                            key={text}
+                            key={Math.random()}
                             className={
                                 type === 1 ? "message-user-wrapper" : "message-bot-wrapper"
                             }
