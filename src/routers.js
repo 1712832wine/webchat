@@ -4,6 +4,8 @@ import {
     FileOutlined,
 } from "@ant-design/icons";
 import ChatbotList from "./views/components/NavContent/ChatbotList/ChatbotList";
+import Information from "./views/components/NavContent/Information/Information";
+import NoteMessages from "./views/components/NavContent/NoteMessages/NoteMessages";
 let routers = [
     {
         name: "Chatbots",
@@ -12,16 +14,16 @@ let routers = [
         component: <ChatbotList />,
     },
     {
-        name: "Hook",
+        name: "Noted Message",
         icon: <PieChartOutlined />,
-        path: "/hook",
-        component: <h3>2</h3>,
+        path: "/noted-message",
+        component: <NoteMessages />,
     },
     {
-        name: "Class Component",
+        name: "Information",
         icon: <FileOutlined />,
-        path: "/classcomponent",
-        component: <h3>3</h3>,
+        path: "/information",
+        component: <Information />,
     },
 ];
 
