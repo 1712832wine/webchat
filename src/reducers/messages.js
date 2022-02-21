@@ -27,6 +27,7 @@ function sendmessagesReducer(state = initialState, action) {
                 ...state,
                 isLoading: false,
                 errMessage: action.payload.message,
+                response_message: [{ 'text': action.payload.message }]
             };
         case SEND_MESSAGE_FINISHED:
             return {

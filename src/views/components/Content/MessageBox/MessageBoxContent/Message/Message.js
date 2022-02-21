@@ -28,7 +28,7 @@ const singleMessage = (text, type, recipient_id, image) => (
             {type === 1 ? <UserOutlined /> : <RobotOutlined />}
         </div>
         <Dropdown overlay={menu}>
-            <Card className="cursor-pointer">
+            <Card className="cursor-pointer mw-50">
                 <Card.Body className="message-text">
                     {
                         image ?
