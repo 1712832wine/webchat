@@ -13,7 +13,7 @@ export default function NoteMessages() {
         console.log('useEffect has been called!');
         var temp = getLocalStorage('saved_messages');
         // console.log(temp)
-        if (temp === undefined) temp = []
+        if (!temp) temp = []
         // console.log(temp)
         setSavedMessages(temp);
     }, []);

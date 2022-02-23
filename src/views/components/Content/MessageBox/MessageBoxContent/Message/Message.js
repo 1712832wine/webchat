@@ -49,7 +49,7 @@ const showConfirm = (text, type, chatbot_id) => {
         onOk() {
             removeSavedMessage(text, type, chatbot_id)
             success({
-                content: 'Save success.',
+                content: 'Delete success.',
             });
         },
         onCancel() {

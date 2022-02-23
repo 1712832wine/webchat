@@ -9,6 +9,7 @@ const changeChatbotAction = (data) => (dispatch) => {
         },
     });
     localStorage.setItem('chatbot_id', data.id);
+    localStorage.setItem('isOpenChatbot', 'true');
 };
 const changeRouteAction = (data) => (dispatch) => {
     if (data.isOpenChatbot) {

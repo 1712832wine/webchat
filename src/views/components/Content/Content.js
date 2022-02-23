@@ -4,13 +4,14 @@ import "./Content.scss";
 import { Carousel, Image, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import MessageBox from "./MessageBox/MessageBox";
-import { getLocalStorage } from "../../../helper/index"
+// import { getLocalStorage } from "../../../helper/index"
 
-export default function Content({ chatbot_id, isOpenChatbot }) {
-    useEffect(() => {
-        chatbot_id = getLocalStorage('chatbot_id');
-        isOpenChatbot = getLocalStorage('isOpenChatbot');
-    }, [])
+function Content({ chatbot_id, isOpenChatbot }) {
+    // useEffect(() => {
+    //     // chatbot_id = localStorage.getItem('chatbot_id');
+    //     // isOpenChatbot = localStorage.getItem('isOpenChatbot');
+    //     // console.log(chatbot_id, isOpenChatbot)
+    // }, [])
     const hideClassName = "d-none d-md-block";
     return (
         <Col chatbot_id="content" className={(isOpenChatbot) ? "p-0" : "p-0 " + hideClassName}>
@@ -45,10 +46,10 @@ export default function Content({ chatbot_id, isOpenChatbot }) {
     );
 }
 
-// function mapStateToProps(state) {
-//     return {
-//         chatbot_id: state.chatbots.id,
-//         isOpenChatbot: state.chatbots.isOpenChatbot,
-//     };
-// }
-// export default connect(mapStateToProps)(Content);
+function mapStateToProps(state) {
+    return {
+        chatbot_id: state.chatbots.id,
+        isOpenChatbot: state.chatbots.isOpenChatbot,
+    };
+}
+export default connect(mapStateToProps)(Content);
