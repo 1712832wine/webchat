@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import "./NoteMessages.scss";
 import Message from "../../Content/MessageBox/MessageBoxContent/Message/Message"
 import { getLocalStorage, setLocalStorage } from "../../../../helper/index"
-import { DeleteOutlined, ExclamationCircleOutlined } from "@ant-design/icons"
+import { DeleteOutlined, ExclamationCircleOutlined, ReloadOutlined } from "@ant-design/icons"
 import { Modal } from "antd"
 
 const { confirm, success } = Modal;
 
 export default function NoteMessages() {
     const [saved_messages, setSavedMessages] = useState([]);
+    const [reload, setReload] = useState(false);
     useEffect(() => {
         console.log('useEffect has been called!');
         var temp = getLocalStorage('saved_messages');
@@ -39,7 +40,12 @@ export default function NoteMessages() {
     return (
         <div>
             <h6 className="px-2 py-3 d-flex justify-content-between">Notes messages
-                <DeleteOutlined className="delete-icon" onClick={showConfirm} /></h6>
+                <div>
+                    <ReloadOutlined className="mx-2 reload-icon" />
+                    <DeleteOutlined className="delete-icon" onClick={showConfirm} />
+                </div>
+
+            </h6>
 
 
 
