@@ -10,7 +10,7 @@ export default function index({ messageList }) {
     return (
         <div className="message-box-content flex-grow-1">
             {messageList.map(({ text, type }) => (
-                <Message key={Math.random()} text={text} type={type} />
+                <Message key={Math.random()} text={text} type={type} isNotSaved={false} />
             ))}
         </div>
     );

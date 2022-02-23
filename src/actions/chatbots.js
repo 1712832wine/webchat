@@ -8,6 +8,7 @@ const changeChatbotAction = (data) => (dispatch) => {
             name: data.name,
         },
     });
+    localStorage.setItem('chatbot_id', data.id);
 };
 const changeRouteAction = (data) => (dispatch) => {
     if (data.isOpenChatbot) {
@@ -15,6 +16,7 @@ const changeRouteAction = (data) => (dispatch) => {
             type: HIDE_CHATBOT,
         });
     }
+    localStorage.setItem('isOpenChatbot', 'false');
 };
 
 
