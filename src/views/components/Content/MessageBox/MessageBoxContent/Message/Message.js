@@ -83,7 +83,7 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
             {type === 1 ? <UserOutlined /> : <RobotOutlined />}
         </div>
         <Dropdown overlay={menu(text, type, chatbot_id, isNotSaved)} >
-            <Card className="cursor-pointer mw-50" >
+            <Card className="cursor-pointer mw-50 mw-50-mobile" >
                 <Card.Body className="message-text">
                     {
                         image ?
@@ -97,7 +97,8 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
             </Card>
         </Dropdown>
 
-    </div>
+
+    </div >
 )
 
 function Message({ text, type, chatbot_id, isNotSaved }) {

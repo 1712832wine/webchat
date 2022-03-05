@@ -4,7 +4,21 @@
     cursor: pointer;
 }
 
+.mh100 {
+    max-height: 100vh;
+}
+
+.mw-70 {
+    .mw-50 {
+        // max-width: 70%;
+    }
+}
+
 .reload-icon {
     font-size: 20px;
     cursor: pointer;
+}
+
+.list-messages {
+    overflow-y: scroll;
 }

@@ -34,7 +34,7 @@ const ChatbotItem = ({ chatbot, currentChatbot, setChatbot, changeChatbotAction 
                 </svg>
                 <Stack className="justify-content-center flex-grow-1">
                     <div className="chatbot-name">{chatbot.name}</div>
-                    <div className="last-message">Message 1</div>
+                    <div className="last-message">chat with {chatbot.name} here</div>
                 </Stack>
             </Stack>
         </li>

@@ -38,7 +38,7 @@ export default function NoteMessages() {
     }
 
     return (
-        <div>
+        <div className="d-flex flex-column mh100">
             <h6 className="px-2 py-3 d-flex justify-content-between">Notes messages
                 <div>
                     <ReloadOutlined className="mx-2 reload-icon" />
@@ -47,26 +47,13 @@ export default function NoteMessages() {
 
             </h6>
 
-
-
-            {saved_messages.map((item) => (
-                <div className="pt-2 mw-70" key={Math.random()}>
-                    <Message text={item.text} type={item.type} isSaved={"true"} />
-                </div>
-            ))}
-            {/* <Message key={Math.random()} text={"Đây là tin nhắn quan trọng, được lưu lại"} type={1} />
-                <hr />
-                <Message key={Math.random()} text={"Đây là tin nhắn quan trọng thứ 2, được lưu lại"} type={1} /> */}
-
-
-            {/* <div className="px-2 content">
-                <Card>
-                    <Card.Body className="message-text">
-                        Đây là tin nhắn quan trọng, được lưu lại
-                    </Card.Body>
-                </Card>
-            </div> */}
-
+            <div className="flex-grow-1 list-messages">
+                {saved_messages.map((item) => (
+                    <div className="pt-2 mw-70" key={Math.random()}>
+                        <Message text={item.text} type={item.type} isSaved={"true"} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
