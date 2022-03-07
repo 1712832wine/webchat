@@ -1,25 +1,30 @@
 .message-box-avatar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: #c9cdd1;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #c9cdd1;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.avatar {
+    background: #fd7e14 !important;
 }
 
 .message-box-info {
-  color: #828385;
-  font-size: 18px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    color: #828385;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.font-size{
-  font-size: 22px;
+.font-size {
+    font-size: 22px;
 }
-.cursor-pointer{
-  cursor: pointer;
+
+.cursor-pointer {
+    cursor: pointer;
 }

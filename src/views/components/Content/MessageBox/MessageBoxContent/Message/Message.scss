@@ -8,6 +8,7 @@
     }
     .avatar {
         background: #87d068 !important;
+        margin-left: 7px !important;
     }
 }
 
@@ -16,6 +17,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    .avatar {
+        background: #fd7e14 !important;
+        margin-right: 7px !important;
+    }
 }
 
 .message-avatar {
@@ -55,6 +60,4 @@
     display: flex !important;
     justify-content: center;
     align-items: center;
-    background: #fd7e14 !important;
-    margin: 0 5px !important;
 }
