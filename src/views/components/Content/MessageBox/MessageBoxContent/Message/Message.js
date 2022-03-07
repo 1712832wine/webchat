@@ -20,11 +20,10 @@ const removeSavedMessage = (text, type, chatbot_id) => {
     }
     var temp = { text: text, type: type, chatbot_id: chatbot_id }
     for (var i = 0; i < saved_messages.length; i++) {
-        console.log(saved_messages[i])
-        if (saved_messages[i].text === temp.text)
-
+        if (saved_messages[i].text === temp.text) {
             saved_messages.splice(i, 1)
-        break;
+            break;
+        }
     }
     setLocalStorage('saved_messages', saved_messages)
 }

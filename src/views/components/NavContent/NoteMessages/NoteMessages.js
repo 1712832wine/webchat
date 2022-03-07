@@ -15,7 +15,6 @@ export default function NoteMessages() {
         setReload(!reload)
     }
     const fetchSavedMessage = () => {
-        console.log('useEffect has been called!');
         var temp = getLocalStorage('saved_messages');
         if (!temp) temp = []
         return temp;
