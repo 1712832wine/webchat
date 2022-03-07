@@ -9,7 +9,7 @@ const { confirm, success } = Modal;
 
 export default function NoteMessages() {
     const [saved_messages, setSavedMessages] = useState([]);
-    const [reload, setReload] = useState(false);
+    const [reload, setReload] = useState(0);
     useEffect(() => {
         console.log('useEffect has been called!');
         var temp = getLocalStorage('saved_messages');
@@ -17,8 +17,8 @@ export default function NoteMessages() {
         if (!temp) temp = []
         // console.log(temp)
         setSavedMessages(temp);
-    }, []);
-
+    }, [reload]);
+    const okkkk = () => { }
     const showConfirm = () => {
         confirm({
             title: 'Do you want to delete all saved messages?',
@@ -41,7 +41,7 @@ export default function NoteMessages() {
         <div className="d-flex flex-column height-100">
             <h6 className="px-2 py-3 d-flex justify-content-between">Notes messages
                 <div>
-                    <ReloadOutlined className="mx-2 reload-icon" />
+                    <ReloadOutlined className="mx-2 reload-icon" onClick={okkkk} />
                     <DeleteOutlined className="delete-icon" onClick={showConfirm} />
                 </div>
 

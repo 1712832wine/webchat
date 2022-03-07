@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    .user-message {
+        background: #e5efff;
+    }
+    .avatar {
+        background: #87d068 !important;
+    }
 }
 
 .message-bot-wrapper {

@@ -3,7 +3,7 @@ import React from "react";
 // components
 import { RobotOutlined, MenuOutlined, RetweetOutlined, ExclamationCircleOutlined } from "@ant-design/icons";
 import { Stack } from "react-bootstrap";
-import { Menu, Dropdown, Modal } from 'antd';
+import { Menu, Dropdown, Modal, Avatar } from 'antd';
 
 // others
 import "./MessageBoxTitle.scss";
@@ -52,9 +52,7 @@ function MessageBoxTitle({ name, chatbot_id, setMessageList }) {
     );
     return (
         <Stack direction="horizontal" gap={2} className="p-3">
-            <div className="message-box-avatar">
-                <RobotOutlined />
-            </div>
+            <Avatar className="avatar" size="large" icon={<RobotOutlined />} />
             <div className="message-box-info">{name}</div>
 
             <Dropdown overlay={menu} trigger={['click']}>

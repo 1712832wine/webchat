@@ -82,7 +82,7 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
 
         {type === 1 ? <Avatar className="avatar" size="large" icon={<UserOutlined />} /> : <Avatar className="avatar" size="large" icon={<RobotOutlined />} />}
         <Dropdown overlay={menu(text, type, chatbot_id, isNotSaved)} >
-            <Card className="cursor-pointer mw-50 mw-50-mobile" >
+            <Card className="user-message cursor-pointer mw-50 mw-50-mobile" >
                 <Card.Body className="message-text">
                     {
                         image ?
