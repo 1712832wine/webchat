@@ -8,17 +8,19 @@ import { Modal } from "antd"
 const { confirm, success } = Modal;
 
 export default function NoteMessages() {
-    const [saved_messages, setSavedMessages] = useState([]);
-    const [reload, setReload] = useState(0);
-    useEffect(() => {
+
+    const [reload, setReload] = useState(false);
+
+    const handleReload = () => {
+        setReload(!reload)
+    }
+    const fetchSavedMessage = () => {
         console.log('useEffect has been called!');
         var temp = getLocalStorage('saved_messages');
-        // console.log(temp)
         if (!temp) temp = []
-        // console.log(temp)
-        setSavedMessages(temp);
-    }, [reload]);
-    const okkkk = () => { }
+        return temp;
+    }
+
     const showConfirm = () => {
         confirm({
             title: 'Do you want to delete all saved messages?',
@@ -41,14 +43,14 @@ export default function NoteMessages() {
         <div className="d-flex flex-column height-100">
             <h6 className="px-2 py-3 d-flex justify-content-between">Notes messages
                 <div>
-                    <ReloadOutlined className="mx-2 reload-icon" onClick={okkkk} />
+                    <ReloadOutlined className="mx-2 reload-icon" onClick={handleReload} />
                     <DeleteOutlined className="delete-icon" onClick={showConfirm} />
                 </div>
 
             </h6>
 
             <div className="flex-grow-1 list-messages">
-                {saved_messages.map((item) => (
+                {fetchSavedMessage().map((item) => (
                     <div className="pt-2 mw-70" key={Math.random()}>
                         <Message text={item.text} type={item.type} isSaved={"true"} />
                     </div>
