@@ -3,7 +3,7 @@ import React from "react";
 import { RobotOutlined, UserOutlined } from "@ant-design/icons";
 import { Card } from "react-bootstrap";
 import { Image } from 'antd';
-import { Menu, Dropdown, Modal } from 'antd';
+import { Menu, Dropdown, Modal, Avatar } from 'antd';
 import { SaveOutlined, DeleteOutlined, ExclamationCircleOutlined } from "@ant-design/icons";
 import { connect } from "react-redux";
 import { setLocalStorage, getLocalStorage } from "../../../../../../helper/index"
@@ -79,9 +79,8 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
             type === 1 ? "message-user-wrapper" : "message-bot-wrapper"
         }
     >
-        <div className="message-avatar">
-            {type === 1 ? <UserOutlined /> : <RobotOutlined />}
-        </div>
+
+        {type === 1 ? <Avatar className="avatar" size="large" icon={<UserOutlined />} /> : <Avatar className="avatar" size="large" icon={<RobotOutlined />} />}
         <Dropdown overlay={menu(text, type, chatbot_id, isNotSaved)} >
             <Card className="cursor-pointer mw-50 mw-50-mobile" >
                 <Card.Body className="message-text">

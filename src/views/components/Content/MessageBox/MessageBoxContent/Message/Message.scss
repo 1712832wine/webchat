@@ -45,3 +45,10 @@
 //         max-width: 150px !important;
 //     }
 // }
+.avatar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #fd7e14 !important;
+    margin: 0 5px !important;
+}
