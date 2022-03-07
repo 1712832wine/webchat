@@ -38,7 +38,7 @@ export default function NoteMessages() {
     }
 
     return (
-        <div className="d-flex flex-column mh100">
+        <div className="d-flex flex-column height-100">
             <h6 className="px-2 py-3 d-flex justify-content-between">Notes messages
                 <div>
                     <ReloadOutlined className="mx-2 reload-icon" />

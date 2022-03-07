@@ -1,7 +1,7 @@
 import {
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
+    MessageOutlined,
+    HistoryOutlined,
+    InfoCircleOutlined,
 } from "@ant-design/icons";
 import ChatbotList from "./views/components/NavContent/ChatbotList/ChatbotList";
 import Information from "./views/components/NavContent/Information/Information";
@@ -9,19 +9,19 @@ import NoteMessages from "./views/components/NavContent/NoteMessages/NoteMessage
 let routers = [
     {
         name: "Chatbots",
-        icon: <DesktopOutlined />,
+        icon: <MessageOutlined />,
         path: "/chatbots",
         component: <ChatbotList />,
     },
     {
         name: "Noted Message",
-        icon: <PieChartOutlined />,
+        icon: <HistoryOutlined />,
         path: "/noted-message",
         component: <NoteMessages />,
     },
     {
         name: "Information",
-        icon: <FileOutlined />,
+        icon: <InfoCircleOutlined />,
         path: "/information",
         component: <Information />,
     },

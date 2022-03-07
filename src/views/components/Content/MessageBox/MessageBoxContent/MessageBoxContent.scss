@@ -1,18 +1,16 @@
 .message-box-content {
-  display: flex;
-  overflow-x: hidden;
-  padding-top: 1rem;
-  overflow-y: scroll;
-  flex-direction: column-reverse;
-  width: 100%;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(227, 233, 233, 1) 0%, rgba(167, 226, 212, 1) 100%);
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
+    display: flex;
+    overflow-x: hidden;
+    padding-top: 1rem;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    width: 100%;
+    background: #b1d9e6;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+    }
 }
