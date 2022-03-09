@@ -30,7 +30,7 @@ const ChatbotItem = ({ chatbot, currentChatbot, setChatbot, changeChatbotAction 
                 direction="horizontal"
                 gap={2}
             >
-                <Avatar className="avatar" size="large" icon={<RobotOutlined />} />
+                <Avatar src="./logo.jpg" className="avatar" size="large" icon={<RobotOutlined />} />
                 <Stack className="justify-content-center flex-grow-1">
                     <div className="chatbot-name">{chatbot.name}</div>
                     <div className="last-message">chat with {chatbot.name} here</div>

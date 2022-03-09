@@ -52,7 +52,7 @@ function MessageBoxTitle({ name, chatbot_id, setMessageList }) {
     );
     return (
         <Stack direction="horizontal" gap={2} className="p-3">
-            <Avatar className="avatar" size="large" icon={<RobotOutlined />} />
+            <Avatar src="./logo.jpg" className="avatar avatar-title" size="large" icon={<RobotOutlined />} />
             <div className="message-box-info">{name}</div>
 
             <Dropdown overlay={menu} trigger={['click']}>

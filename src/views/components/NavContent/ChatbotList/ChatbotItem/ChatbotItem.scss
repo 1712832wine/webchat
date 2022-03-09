@@ -1,30 +1,26 @@
 li {
-    
-
     &.chatbot {
         cursor: pointer;
-
         &.active {
             background: #e5efff;
         }
-
-        .avatar-chatbot-box{
-            .avatar-chatbot{
+        .avatar-chatbot-box {
+            .avatar-chatbot {
                 width: 36px;
                 height: 36px;
                 line-height: 48px;
+            }
+            .avatar {
+                border: 2px solid #003d9e
             }
         }
         .chatbot-name {
             font-size: 16px;
             color: black;
         }
-    
         .last-message {
             font-size: 14px;
             color: #72808e;
         }
     }
-
-   
 }

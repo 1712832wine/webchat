@@ -10,10 +10,6 @@
     font-size: 25px;
 }
 
-.avatar {
-    background: #ef443c !important;
-}
-
 .message-box-info {
     color: #828385;
     font-size: 18px;
@@ -27,4 +23,9 @@
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.avatar.avatar-title {
+    background: #ef443c !important;
+    border: 2px solid #003d9e;
 }
