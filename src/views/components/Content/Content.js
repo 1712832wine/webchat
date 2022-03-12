@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Content.scss";
 
 import { Carousel, Image, Col } from "react-bootstrap";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./NoteMessages.scss";
 import Message from "../../Content/MessageBox/MessageBoxContent/Message/Message"
 import { getLocalStorage, setLocalStorage } from "../../../../helper/index"
