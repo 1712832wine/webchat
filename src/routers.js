@@ -1,6 +1,6 @@
 import {
     MessageOutlined,
-    HistoryOutlined,
+    SaveOutlined,
     InfoCircleOutlined,
 } from "@ant-design/icons";
 import ChatbotList from "./views/components/NavContent/ChatbotList/ChatbotList";
@@ -15,7 +15,7 @@ let routers = [
     },
     {
         name: "Noted Message",
-        icon: <HistoryOutlined />,
+        icon: <SaveOutlined />,
         path: "/noted-message",
         component: <NoteMessages />,
     },
