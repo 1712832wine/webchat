@@ -83,7 +83,7 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
 
             <Avatar className="avatar"
                 size="large" icon={<UserOutlined />} /> : <Avatar src="./logo.jpg" className="avatar" size="large" icon={<RobotOutlined />} />}
-        <Dropdown overlay={menu(text, type, chatbot_id, isNotSaved)} >
+        {image ?
             <Card className="user-message cursor-pointer mw-50 mw-50-mobile" >
                 <Card.Body className="message-text">
                     {
@@ -96,8 +96,22 @@ const singleMessage = (text, type, recipient_id, image, chatbot_id, isNotSaved) 
                     }
                 </Card.Body>
             </Card>
-        </Dropdown>
-
+            :
+            <Dropdown overlay={menu(text, type, chatbot_id, isNotSaved)} >
+                <Card className="user-message cursor-pointer mw-50 mw-50-mobile" >
+                    <Card.Body className="message-text">
+                        {
+                            image ?
+                                <Image
+                                    width={200}
+                                    src={image}
+                                /> :
+                                text
+                        }
+                    </Card.Body>
+                </Card>
+            </Dropdown>
+        }
 
     </div >
 )
